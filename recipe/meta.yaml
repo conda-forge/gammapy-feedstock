@@ -33,8 +33,8 @@ requirements:
     - setuptools
     - {{ pin_compatible('numpy') }}
     - scipy >=1.2
-    - astropy >=4.0
-    - regions >=0.4
+    - astropy >=4.1
+    - regions >=0.5
     - click >=7.0
     - pyyaml >=5.1
     - pydantic >=1.2
