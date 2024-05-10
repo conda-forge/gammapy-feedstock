@@ -14,7 +14,7 @@ build:
   entry_points:
     - gammapy = gammapy.scripts.main:cli
   script: {{ PYTHON }} -m pip install . --no-deps -vv
-  skip: true  # [py<=38]
+  skip: true  # [py<=39]
 
 requirements:
   build:
@@ -39,7 +39,7 @@ requirements:
     - regions >=0.5
     - click >=7.0
     - pyyaml >=5.3
-    - pydantic >=1.4,<2.0
+    - pydantic >=2.5.0
     - iminuit >=2.8.0
     - matplotlib-base >=3.4
 
