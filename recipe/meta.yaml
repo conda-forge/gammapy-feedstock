@@ -10,7 +10,7 @@ source:
   sha256: b853362299efee8ba6cdcb66d92affb20b6f331e203728149281a89e44a6ae36
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - gammapy = gammapy.scripts.main:cli
   script: {{ PYTHON }} -m pip install . --no-deps -vv
@@ -22,6 +22,7 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - numpy                                  # [build_platform != target_platform]
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
   host:
     - python
     - setuptools_scm >=6.2
