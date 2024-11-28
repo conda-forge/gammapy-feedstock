@@ -10,7 +10,7 @@ source:
   sha256: 8b0eb6f282c8e6f6de7223a92dfe186594575d8fbc18143b56a0c8a52679f35a
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - gammapy = gammapy.scripts.main:cli
   script: {{ PYTHON }} -m pip install . --no-deps -vv
@@ -35,7 +35,7 @@ requirements:
     - python
     - setuptools
     - scipy >=1.5,!=1.10
-    - astropy >=5.0
+    - astropy-base >=5.0
     - regions >=0.5
     - click >=7.0
     - pyyaml >=5.3
