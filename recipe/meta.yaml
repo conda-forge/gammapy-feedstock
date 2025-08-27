@@ -14,7 +14,6 @@ build:
   entry_points:
     - gammapy = gammapy.scripts.main:cli
   script: {{ PYTHON }} -m pip install . --no-deps -vv
-  skip: true  # [py<=38]
 
 requirements:
   build:
@@ -29,19 +28,19 @@ requirements:
     - setuptools
     - pip !=22.1
     - cython
-    - numpy
+    - numpy >=1.26,<2.2
     - extension-helpers
   run:
     - python
     - setuptools
-    - scipy >=1.5,!=1.10
-    - astropy-base >=5.0
-    - regions >=0.5
-    - click >=7.0
+    - scipy >=1.13
+    - astropy-base >=6.0
+    - regions >=0.9
+    - click >=9.0
     - pyyaml >=5.3
-    - pydantic >=2.5
-    - iminuit >=2.8.0
-    - matplotlib-base >=3.4
+    - pydantic >=2.8
+    - iminuit >=2.26.0
+    - matplotlib-base >=3.8, <3.10
 
 test:
   imports:
