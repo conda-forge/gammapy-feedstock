@@ -40,7 +40,7 @@ requirements:
     - pyyaml >=5.3
     - pydantic >=2.8
     - iminuit >=2.26.0
-    - matplotlib-base >=3.8, <3.10
+    - matplotlib-base >=3.8,<3.10
 
 test:
   imports:
