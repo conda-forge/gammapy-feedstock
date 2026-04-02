@@ -1,16 +1,17 @@
 {% set name = "gammapy" %}
-{% set version = "2.0.1" %}
+{% set version = "2.1" %}
 
 package:
   name: {{ name|lower }}
-  version: {{ version }}
+  version: "{{ version }}"
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 0efde8d7ddf80a906edf46d53c0b604181623218412d438b64e1ca5f00f06f2c
+  sha256: 334833684de74d10e37184c0252de82ddee233fbb7be366a248fa7b4279c3590
 
 build:
   number: 0
+  skip: true  # [py<311]
   entry_points:
     - gammapy = gammapy.scripts.main:cli
   script: {{ PYTHON }} -m pip install . --no-deps -vv
@@ -19,7 +20,7 @@ requirements:
   build:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-    - numpy >=1.26,<2.2                      # [build_platform != target_platform]
+    - numpy >=2.2                      # [build_platform != target_platform]
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
   host:
@@ -28,7 +29,7 @@ requirements:
     - setuptools
     - pip !=22.1
     - cython
-    - numpy >=1.26,<2.2
+    - numpy >=2.0
     - extension-helpers
   run:
     - python
@@ -40,7 +41,7 @@ requirements:
     - pyyaml >=5.3
     - pydantic >=2.8
     - iminuit >=2.26.0
-    - matplotlib-base >=3.8,<3.10
+    - matplotlib-base >=3.8
 
 test:
   imports:
