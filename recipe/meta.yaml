@@ -28,7 +28,7 @@ requirements:
     - setuptools
     - pip !=22.1
     - cython
-    - numpy >=1.26,<2.2
+    - numpy >=2.0
     - extension-helpers
   run:
     - python
@@ -40,7 +40,7 @@ requirements:
     - pyyaml >=5.3
     - pydantic >=2.8
     - iminuit >=2.26.0
-    - matplotlib-base >=3.8,<3.10
+    - matplotlib-base >=3.8
 
 test:
   imports:
