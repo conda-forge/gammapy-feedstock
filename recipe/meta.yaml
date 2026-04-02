@@ -1,5 +1,5 @@
 {% set name = "gammapy" %}
-{% set version = "2.0.1" %}
+{% set version = "2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 0efde8d7ddf80a906edf46d53c0b604181623218412d438b64e1ca5f00f06f2c
+  sha256: 334833684de74d10e37184c0252de82ddee233fbb7be366a248fa7b4279c3590
 
 build:
   number: 0
